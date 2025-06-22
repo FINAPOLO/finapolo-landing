@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FinApolo: tu copiloto financiero. Organiza tus finanzas personales y de negocio fácilmente por WhatsApp." />
   <title>FinApolo | Tu copiloto financiero</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
@@ -38,6 +40,7 @@
       list-style: none;
       display: flex;
       gap: 25px;
+      flex-wrap: wrap;
     }
 
     nav ul li a {
@@ -53,6 +56,8 @@
 
     main {
       padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     section {
@@ -73,6 +78,8 @@
       font-size: 18px;
       cursor: pointer;
       text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
     }
 
     footer {
@@ -81,12 +88,24 @@
       color: white;
       padding: 20px;
     }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      nav ul li a {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="logo.png" alt="Logo FinApolo" />
-    <nav>
+    <nav aria-label="Menú principal">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
@@ -104,7 +123,7 @@
     <section id="inicio">
       <h1>Bienvenido a FinApolo</h1>
       <p>Somos tu copiloto financiero: ayudamos a emprendedores, pymes y profesionales a tener control total de sus finanzas de forma fácil, rápida y desde WhatsApp.</p>
-      <a class="btn" href="https://wa.me/573334309834" target="_blank">Habla con tu asistente</a>
+      <a class="btn" href="https://wa.me/573334309834" target="_blank" rel="noopener noreferrer">Habla con tu asistente</a>
     </section>
 
     <section id="nosotros">
@@ -125,24 +144,30 @@
 
     <section id="beneficios">
       <h2>Beneficios para tu negocio</h2>
-      <p>✔ Ahorra tiempo y dinero en procesos contables<br>✔ Visualiza tu salud financiera en tiempo real<br>✔ Toma decisiones con datos y sin estrés<br>✔ Sin necesidad de apps complejas o conocimientos técnicos</p>
+      <p>✔ Ahorra tiempo y dinero en procesos contables<br>
+         ✔ Visualiza tu salud financiera en tiempo real<br>
+         ✔ Toma decisiones con datos y sin estrés<br>
+         ✔ Sin necesidad de apps complejas o conocimientos técnicos</p>
     </section>
 
     <section id="como-funciona">
       <h2>¿Cómo funciona?</h2>
-      <p>1. Regístrate en WhatsApp<br>2. Empieza a registrar ingresos y gastos con mensajes simples<br>3. Recibe reportes, proyecciones y alertas financieras<br>4. Crece tu negocio con datos reales</p>
+      <p>1. Regístrate en WhatsApp<br>
+         2. Empieza a registrar ingresos y gastos con mensajes simples<br>
+         3. Recibe reportes, proyecciones y alertas financieras<br>
+         4. Crece tu negocio con datos reales</p>
     </section>
 
     <section id="testimonios">
       <h2>Lo que dicen nuestros usuarios</h2>
       <p>⭐ "Gracias a FinApolo logré entender mis gastos y crecer mi empresa un 30%" – Camila, emprendedora<br>
-      ⭐ "Ahora sé cuánto gano de verdad y tengo paz mental financiera" – Andrés, independiente</p>
+         ⭐ "Ahora sé cuánto gano de verdad y tengo paz mental financiera" – Andrés, independiente</p>
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
       <p>📩 Escríbenos a: <a href="mailto:info@finapolo.com">info@finapolo.com</a><br>
-      💬 WhatsApp: <a href="https://wa.me/573334309834" target="_blank">+57 333 430 9834</a></p>
+         💬 WhatsApp: <a href="https://wa.me/573334309834" target="_blank" rel="noopener noreferrer">+57 333 430 9834</a></p>
     </section>
 
     <section id="proteccion">
